@@ -16,18 +16,21 @@ public class controladorVideo : MonoBehaviour
     public Button speedButton1;     
     public Button speedButton15;   
 
-     public Button toggleButton; 
+    public Button toggleButton; 
 
     public Image progressBar;
 
     public GameObject targetObject;
     public GameObject control;
+    public GameObject[] opciones;
 
 
 
     private bool isPaused = false;
     private bool isMuted = false;
-    private bool isVisible = false; 
+    private bool isVisible = false;
+
+    private float tolerancia = 0.1f;
 
     void Start()
     {
@@ -58,6 +61,15 @@ public class controladorVideo : MonoBehaviour
         {
             // El valor de fillAmount va de 0 (vacío) a 1 (lleno), por eso usamos la fracción del tiempo actual respecto al total
             progressBar.fillAmount = (float)(videoPlayer.time / videoPlayer.clip.length);
+        }
+
+        if (videoPlayer.clip != null && videoPlayer.time >= (videoPlayer.clip.length - tolerancia))
+        {
+            // Activamos todas las opciones en el array
+            for (int i = 0; i < opciones.Length; i++)
+            {
+                opciones[i].SetActive(true);
+            }
         }
 
     }

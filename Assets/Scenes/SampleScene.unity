@@ -2054,7 +2054,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &109880617
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2246,6 +2246,8 @@ MonoBehaviour:
   progressBar: {fileID: 1367581144}
   targetObject: {fileID: 1873357305}
   control: {fileID: 945240611}
+  opciones:
+  - {fileID: 1019978846}
 --- !u!1 &130509968
 GameObject:
   m_ObjectHideFlags: 0
@@ -2339,7 +2341,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &133606536
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2666,6 +2668,9 @@ MonoBehaviour:
   progressBar: {fileID: 772329115}
   targetObject: {fileID: 1517746426}
   control: {fileID: 368973675}
+  opciones:
+  - {fileID: 1022163386}
+  - {fileID: 850647510}
 --- !u!1 &170847812
 GameObject:
   m_ObjectHideFlags: 0
@@ -3511,7 +3516,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &217913979
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4464,7 +4469,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &255561727
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5639,6 +5644,7 @@ MonoBehaviour:
   progressBar: {fileID: 1260105996}
   targetObject: {fileID: 796885917}
   control: {fileID: 0}
+  opciones: []
 --- !u!1 &304503750
 GameObject:
   m_ObjectHideFlags: 0
@@ -7335,6 +7341,8 @@ MonoBehaviour:
   progressBar: {fileID: 211478640}
   targetObject: {fileID: 604389218}
   control: {fileID: 75064319}
+  opciones:
+  - {fileID: 1834275908}
 --- !u!1 &423517443
 GameObject:
   m_ObjectHideFlags: 0
@@ -11074,7 +11082,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &609530746
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11084,7 +11092,7 @@ RectTransform:
   m_GameObject: {fileID: 609530745}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.8999996, y: 2.8999996, z: 2.8999996}
+  m_LocalScale: {x: 2.8999994, y: 2.8999994, z: 2.8999994}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1068901497}
@@ -11092,7 +11100,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -600, y: 0}
+  m_AnchoredPosition: {x: -600.0001, y: 0}
   m_SizeDelta: {x: 160, y: 58.47}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &609530747
@@ -12769,6 +12777,9 @@ MonoBehaviour:
   progressBar: {fileID: 1812193789}
   targetObject: {fileID: 1381185684}
   control: {fileID: 32754301}
+  opciones:
+  - {fileID: 609530745}
+  - {fileID: 2140436415}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -15665,7 +15676,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &850647511
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17718,7 +17729,9 @@ MonoBehaviour:
   toggleButton: {fileID: 280746421}
   progressBar: {fileID: 722063651}
   targetObject: {fileID: 1550287538}
-  control: {fileID: 0}
+  control: {fileID: 16023106}
+  opciones:
+  - {fileID: 1950318761}
 --- !u!1 &976047940
 GameObject:
   m_ObjectHideFlags: 0
@@ -17785,6 +17798,9 @@ MonoBehaviour:
   progressBar: {fileID: 371835603}
   targetObject: {fileID: 1130772816}
   control: {fileID: 737812873}
+  opciones:
+  - {fileID: 109880616}
+  - {fileID: 217913978}
 --- !u!1 &976877915
 GameObject:
   m_ObjectHideFlags: 0
@@ -18672,7 +18688,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1019978847
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18817,7 +18833,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1022163387
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19009,6 +19025,8 @@ MonoBehaviour:
   progressBar: {fileID: 805322274}
   targetObject: {fileID: 1087443417}
   control: {fileID: 1314537170}
+  opciones:
+  - {fileID: 133606535}
 --- !u!1 &1031845614
 GameObject:
   m_ObjectHideFlags: 0
@@ -21472,6 +21490,8 @@ MonoBehaviour:
   progressBar: {fileID: 1290073686}
   targetObject: {fileID: 208665415}
   control: {fileID: 2054742460}
+  opciones:
+  - {fileID: 255561726}
 --- !u!1 &1162229247
 GameObject:
   m_ObjectHideFlags: 0
@@ -27148,6 +27168,8 @@ MonoBehaviour:
   progressBar: {fileID: 2039118215}
   targetObject: {fileID: 1223421867}
   control: {fileID: 1118450306}
+  opciones:
+  - {fileID: 2013406082}
 --- !u!1 &1644288772
 GameObject:
   m_ObjectHideFlags: 0
@@ -30564,7 +30586,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1834275909
 RectTransform:
   m_ObjectHideFlags: 0
@@ -31747,7 +31769,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1950318762
 RectTransform:
   m_ObjectHideFlags: 0
@@ -32610,7 +32632,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2013406083
 RectTransform:
   m_ObjectHideFlags: 0
@@ -34308,7 +34330,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2140436416
 RectTransform:
   m_ObjectHideFlags: 0
