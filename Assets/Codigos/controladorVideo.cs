@@ -5,28 +5,29 @@ using System.Collections.Generic;
 
 public class controladorVideo : MonoBehaviour
 {
-    public VideoPlayer videoPlayer;    // Asigna el componente VideoPlayer en el inspector
-    public Button pauseButton1;        // Asigna el primer botón de pausa en el inspector
-    public Button pauseButton2;        // Asigna el segundo botón de pausa en el inspector
-    public Button fastForwardButton;   // Asigna el botón para adelantar en el inspector
-    public Button rewindButton;        // Asigna el botón para retroceder en el inspector
-    public Button audioButton;         // Asigna el botón para mutear/activar el audio en el inspector
+    public VideoPlayer videoPlayer;   
+    public Button pauseButton1;       
+    public Button pauseButton2;       
+    public Button fastForwardButton;   
+    public Button rewindButton;        
+    public Button audioButton;         
 
-    public Button speedButton05;     // Botón para velocidad 0.5x
-    public Button speedButton1;      // Botón para velocidad 1x
-    public Button speedButton15;     // Botón para velocidad 1.5x
+    public Button speedButton05;    
+    public Button speedButton1;     
+    public Button speedButton15;   
 
      public Button toggleButton; 
 
     public Image progressBar;
 
-    public GameObject targetObject; 
+    public GameObject targetObject;
+    public GameObject control;
 
 
 
     private bool isPaused = false;
     private bool isMuted = false;
-     private bool isVisible = false; 
+    private bool isVisible = false; 
 
     void Start()
     {
@@ -58,6 +59,7 @@ public class controladorVideo : MonoBehaviour
             // El valor de fillAmount va de 0 (vacío) a 1 (lleno), por eso usamos la fracción del tiempo actual respecto al total
             progressBar.fillAmount = (float)(videoPlayer.time / videoPlayer.clip.length);
         }
+
     }
 
     void TogglePause()
@@ -115,5 +117,17 @@ public class controladorVideo : MonoBehaviour
      void SetPlaybackSpeed(float speed)
     {
         videoPlayer.playbackSpeed = speed;
+    }
+
+    public void controlador()
+    {
+        if(!control.activeSelf)
+        {
+            control.SetActive(true);
+        }
+        else
+        {
+            control.SetActive(false);
+        }
     }
 }
