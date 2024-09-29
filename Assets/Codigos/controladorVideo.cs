@@ -12,10 +12,21 @@ public class controladorVideo : MonoBehaviour
     public Button rewindButton;        // Asigna el botón para retroceder en el inspector
     public Button audioButton;         // Asigna el botón para mutear/activar el audio en el inspector
 
+    public Button speedButton05;     // Botón para velocidad 0.5x
+    public Button speedButton1;      // Botón para velocidad 1x
+    public Button speedButton15;     // Botón para velocidad 1.5x
+
+     public Button toggleButton; 
+
     public Image progressBar;
+
+    public GameObject targetObject; 
+
+
 
     private bool isPaused = false;
     private bool isMuted = false;
+     private bool isVisible = false; 
 
     void Start()
     {
@@ -26,7 +37,16 @@ public class controladorVideo : MonoBehaviour
         rewindButton.onClick.AddListener(Rewind);
         audioButton.onClick.AddListener(ToggleAudio);  // Asigna el botón de audio
 
-          progressBar.fillAmount = 0;
+        toggleButton.onClick.AddListener(ToggleVisibility);
+
+        speedButton05.onClick.AddListener(() => SetPlaybackSpeed(0.5f));
+        speedButton1.onClick.AddListener(() => SetPlaybackSpeed(1.0f));
+        speedButton15.onClick.AddListener(() => SetPlaybackSpeed(1.5f));
+
+
+        progressBar.fillAmount = 0;
+
+        targetObject.SetActive(isVisible);
     }
 
 
@@ -80,5 +100,20 @@ public class controladorVideo : MonoBehaviour
             videoPlayer.SetDirectAudioMute(0, true);   // Mutea el audio
         }
         isMuted = !isMuted;
+    }
+
+
+    void ToggleVisibility()
+    {
+        // Cambiar el estado de visibilidad
+        isVisible = !isVisible;
+
+        // Aplicar el nuevo estado al objeto
+        targetObject.SetActive(isVisible);
+    }
+
+     void SetPlaybackSpeed(float speed)
+    {
+        videoPlayer.playbackSpeed = speed;
     }
 }
