@@ -71,6 +71,13 @@ public class controladorVideo : MonoBehaviour
                 opciones[i].SetActive(true);
             }
         }
+        else
+        {
+            for (int i = 0; i < opciones.Length; i++)
+            {
+                opciones[i].SetActive(false);
+            }
+        }
 
     }
 
