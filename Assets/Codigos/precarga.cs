@@ -6,32 +6,31 @@ using UnityEngine.Video;
 public class precarga : MonoBehaviour
 {
     public VideoPlayer[] videoPlayers; 
+    public VideoClip[] videoClips;    
 
-    void Start()
+    void Update()
     {
-        foreach (VideoPlayer vp in videoPlayers)
+        for (int i = 0; i < videoPlayers.Length; i++)
         {
-            PreloadVideo(vp);
+            PreloadVideo(videoPlayers[i], videoClips[i]); 
         }
     }
 
-
-    public void PreloadVideo(VideoPlayer videoPlayer)
+    public void PreloadVideo(VideoPlayer videoPlayer, VideoClip videoClip)
     {
-
-        videoPlayer.playOnAwake = true;
-
-
-        videoPlayer.Prepare();
-
-
+        videoPlayer.playOnAwake = false;
+        videoPlayer.Prepare(); 
+        videoPlayer.clip = videoClip;
+        if(videoPlayer.isPrepared)
+        {
+            videoPlayer.Play();
+        }
         videoPlayer.prepareCompleted += OnVideoPrepared;
     }
 
 
     void OnVideoPrepared(VideoPlayer vp)
     {
-        Debug.Log("Video preparado: " + vp.url);
-        
+        Debug.Log("Video preparado: " + vp.clip.name);
     }
 }

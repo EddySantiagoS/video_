@@ -3186,6 +3186,17 @@ MonoBehaviour:
   - {fileID: 436854099}
   - {fileID: 1514498575}
   - {fileID: 257284221}
+  videoClips:
+  - {fileID: 32900000, guid: eb7ea7c54adcb584da79d1ff34b69591, type: 3}
+  - {fileID: 32900000, guid: 9ac6ac30cd59554408466427301b3cd3, type: 3}
+  - {fileID: 32900000, guid: 8b34a228f4a364f4a9af61160c87638f, type: 3}
+  - {fileID: 32900000, guid: 2be9eceb7fa16884b85c4ec6806d5a86, type: 3}
+  - {fileID: 32900000, guid: 8bb5df08ea49c7d43865c325eebaf3a0, type: 3}
+  - {fileID: 32900000, guid: 265542638a854734083396e24f2e663e, type: 3}
+  - {fileID: 32900000, guid: 726f62285476ff340a137e53d9a1ff3f, type: 3}
+  - {fileID: 32900000, guid: 18362d935e8b217488a6f5eaa6256137, type: 3}
+  - {fileID: 32900000, guid: 8c7b80b9ca0909a46beb489f1bd1b923, type: 3}
+  - {fileID: 32900000, guid: 33fd8f6e6ce5160419225ae2cfc88730, type: 3}
 --- !u!1 &244732609
 GameObject:
   m_ObjectHideFlags: 0
