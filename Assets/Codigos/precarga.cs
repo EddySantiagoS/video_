@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Video;
 
@@ -18,14 +19,14 @@ public class precarga : MonoBehaviour
 
     public void PreloadVideo(VideoPlayer videoPlayer, VideoClip videoClip)
     {
-        videoPlayer.playOnAwake = false;
         videoPlayer.Prepare(); 
         videoPlayer.clip = videoClip;
         if(videoPlayer.isPrepared)
         {
-            videoPlayer.Play();
+            videoPlayer.playOnAwake = false;
         }
         videoPlayer.prepareCompleted += OnVideoPrepared;
+        //videoPlayer.loopPointReached += OnVideoFinished;
     }
 
 
@@ -33,4 +34,10 @@ public class precarga : MonoBehaviour
     {
         Debug.Log("Video preparado: " + vp.clip.name);
     }
+
+    //void OnVideoFinished(VideoPlayer vp)
+    //{
+    //    Debug.Log("Video terminado: " + vp.clip.name);
+    //    vp.Stop();
+    //}
 }
