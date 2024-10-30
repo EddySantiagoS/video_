@@ -2,42 +2,48 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.Video;
+using UnityEngine.UI;
 
 public class precarga : MonoBehaviour
 {
-    public VideoPlayer[] videoPlayers; 
-    public VideoClip[] videoClips;    
+    // Objetos de la historia (páginas o secciones que se activan)
+    public GameObject[] objetosHistoria;
+
+    // Botones del menú de inicio correspondientes a cada página o sección
+    public GameObject[] botonesInicio;
+
+    void Start()
+    {
+        // Inicializamos el estado de los botones en función de los datos guardados
+        for (int i = 0; i < botonesInicio.Length; i++)
+        {
+            // Si el progreso está guardado, desbloqueamos el botón correspondiente
+            if (PlayerPrefs.GetInt("BotonDesbloqueado_" + i, 0) == 1)
+            {
+                botonesInicio[i].SetActive(false);
+            }
+            else
+            {
+                botonesInicio[i].SetActive(true);
+            }
+        }
+    }
 
     void Update()
     {
-        for (int i = 0; i < videoPlayers.Length; i++)
+        // Revisamos el estado de los objetos de la historia
+        for (int i = 0; i < objetosHistoria.Length; i++)
         {
-            PreloadVideo(videoPlayers[i], videoClips[i]); 
+            // Si un objeto de historia está activo y su botón aún no está desbloqueado
+            if (objetosHistoria[i].activeSelf && botonesInicio[i].activeSelf)
+            {
+                // Desbloqueamos el botón
+                botonesInicio[i].SetActive(false);
+
+                // Guardamos el estado de desbloqueo en PlayerPrefs
+                PlayerPrefs.SetInt("BotonDesbloqueado_" + i, 1);
+                PlayerPrefs.Save();
+            }
         }
     }
-
-    public void PreloadVideo(VideoPlayer videoPlayer, VideoClip videoClip)
-    {
-        videoPlayer.Prepare(); 
-        videoPlayer.clip = videoClip;
-        if(videoPlayer.isPrepared)
-        {
-            videoPlayer.playOnAwake = false;
-        }
-        videoPlayer.prepareCompleted += OnVideoPrepared;
-        //videoPlayer.loopPointReached += OnVideoFinished;
-    }
-
-
-    void OnVideoPrepared(VideoPlayer vp)
-    {
-        Debug.Log("Video preparado: " + vp.clip.name);
-    }
-
-    //void OnVideoFinished(VideoPlayer vp)
-    //{
-    //    Debug.Log("Video terminado: " + vp.clip.name);
-    //    vp.Stop();
-    //}
 }
